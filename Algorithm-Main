@@ -1,0 +1,16 @@
+
+MAIN
+1. Start 
+2. Kill all FFMpeg process. Flag Recording = False
+3. Get_Is_this_Time_to_record() [returns 'No' or Date_Time_Sub_Weekday string]
+4. If No, sleep 5secs, go to 2
+5. [assumes this is recording time and string is received]
+6. If Recording = False, StartRecording()
+7. If Recording = True, Get_Is_Time_to_restart_Recording() [5min sync recording to clock], 
+8. Get_Is_Time_to_restart_Recording() if yes then StartRecording()
+9. else, go to 3 
+
+StartRecording()
+ Create Filename with Date_Time_Sub_Weekday, 
+ Start recording, 
+ flag Recording as True.
